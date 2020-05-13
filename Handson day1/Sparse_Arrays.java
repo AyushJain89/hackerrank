@@ -10,8 +10,20 @@ public class Solution {
 
     // Complete the matchingStrings function below.
     static int[] matchingStrings(String[] strings, String[] queries) {
-
-
+        
+     int i,j,count;;
+    int a[]=new int[queries.length];
+    for(i=0;i<queries.length;i++)
+    {
+        count=0;
+        for(j=0;j<strings.length;j++)
+        {
+            if(queries[i].equals(strings[j]))   
+                count++;
+        }
+        a[i]=count;
+    }
+    return a;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
